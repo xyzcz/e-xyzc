@@ -43,6 +43,7 @@
     font: 400 1.5rem var(--font-family);
     color: var(--text);
 
+    text-decoration: none; /* Usunięcie podkreślenia */
     transition: all 0.5s;
 }
 
@@ -62,7 +63,6 @@
     border-radius: 10px;
 }
 
-
 #server:hover, #discord:hover a, #mail:hover a, #telegram:hover a{
     color: var(--accent);
 
@@ -74,7 +74,7 @@
 #server a::after, #discord a::after, #mail a::after, #telegram a::after{
     content: '';
     display: block;
-    width: 0;
+    width: 0; /* Brak podkreślenia na starcie */
     height: 2px;
 
     background: var(--accent);
@@ -83,8 +83,7 @@
 }
 
 #server:hover a::after, #discord:hover a::after, #mail:hover a::after, #telegram:hover a::after{
-    width: 100%;
-
+    width: 100%; /* Efekt podkreślenia po najechaniu */
     transition: all 0.5s;
 }
 
@@ -118,8 +117,7 @@
     transition: all 0.5s;
 }
 
-
-/*Discord text*/
+/* Discord text */
 #discord::before{
     content: 'Discord';
     color: var(--text);
@@ -142,7 +140,6 @@
     display: block;
     font-size: 1.5rem;
     font-weight: 500;
-
 }
 
 #telegram::before{
